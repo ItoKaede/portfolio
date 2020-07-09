@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8" />
+    <title>KP - HOME</title>
+    <meta charset="discription" content="伊藤楓" />
+
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">
+    <link rel="stylesheet" href="css/style2.css">
+    <!-- ▼jQueryの読み込み -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="contents">
+        <h1 class="font2-size1 color">Kaede's PortForio</h1>
+        <div class="a">
+            <p class="font2">Well'come to kaede's Site</p>
+        </div>
+    </div>
+
+    <div class="cp_fullscreenmenu">
+        <input class="toggle" type="checkbox" />
+        <div class="hamburger"><span></span></div>
+        <div class="menu">
+            <div>
+                <ul>
+                    <li><a class="hover_line" href="index.html">Itou Kaede</a></li>
+                    <li><a class="hover_line" href="about.html">About</a></li>
+                    <li><a class="hover_line" href="blog.html">Blog</a></li>
+                    <li><a class="hover_line" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+
+
+<!-- ▼今回のスクリプト本体 -->
+<script type="text/javascript">
+    $(".color").children().addBack().contents().each(function() {
+        if (this.nodeType == 3) {
+            var $this = $(this);
+            $this.replaceWith($this.text().replace(/(\S)/g, "<span>$&</span>"));
+        }
+    });
+</script>
